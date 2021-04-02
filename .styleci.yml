@@ -1,0 +1,7 @@
+php:
+  preset: laravel
+  linting: true
+  disabled:
+    - unused_use
+js: true
+css: true

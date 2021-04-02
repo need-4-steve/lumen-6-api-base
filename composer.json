@@ -1,0 +1,60 @@
+{
+    "name": "need-4-steve/lumen-6-api-base",
+    "description": "Lumen Framework Rest API Starter Project with JWT Authentication",
+    "keywords": ["framework", "laravel", "lumen", "microservice", "JWT", "REST", "API", "boilerplate", "api boilerplate"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^7.2.5",
+        "dingo/api": "^2.4",
+        "illuminate/mail": "^6.0",
+        "illuminate/redis": "^6.0",
+        "laravel/lumen-framework": "^6.0",
+        "laravel/tinker": "^2.4",
+        "liyu/dingo-serializer-switch": "^0.3.1",
+        "nesbot/carbon": "^2.28",
+        "palanik/lumen-cors": "dev-master",
+        "tymon/jwt-auth": "^1"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "flipbox/lumen-generator": "^6.0",
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.0",
+        "cbxtechcorp/lumen-api-routes-list": "^1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\"",
+            "composer install",
+            "php artisan jwt:secret"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+    }
+}
